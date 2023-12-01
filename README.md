@@ -43,11 +43,27 @@
 ### To get perfect grade
 * Do not generate any warning message while compiling code with **gcc209**
 * Follow <a href=https://ee209.kaist.ac.kr/style.pdf>coding style</a>
-  > Names: You should use a clear and consistent style for variable and function names.   
-  > One example of such a style is to prefix each variable name with characters   
-  > that indicate its type. For example, the prefix c might indicate that the variable is of type char,   
-  > i might indicate int, pc might mean char*, ui might mean unsigned int, etc.   
-  > But it is fine to use another style -- a style which does not include the type of a variable in its name -- as long as the result is a readableprogram.   
+  > **Names**:   
+  >> You should use a clear and consistent style for variable and function names.   
+  >> One example of such a style is to prefix each variable name with characters   
+  >> that indicate its type. For example, the prefix c might indicate that the variable is of type char,   
+  >> i might indicate int, pc might mean char*, ui might mean unsigned int, etc.   
+  >> But it is fine to use another style -- a style which does not include the type of a variable in its name -- as long as the result is a readableprogram.   
+  ---
+  > **Line lengths**:   
+  >> Limit line lengths in your source code to 72 characters.   
+  >> Doing so allows us to print your work in two columns, thus saving paper.   
+  ---
+  > **Comments**:   
+  >> Each source code file should begin with a comment that includes your name, student ID, and the description of the file.   
+  ---
+  > **Comments**:   
+  >> Each function should begin with a comment that describes what the function does from the caller's point of view.   
+  >> **The function comment should**:   
+  >>> * Explicitly refer to the function's parameters (by name) and the function's return value.   
+  >>> * State what, if anything, the function reads from standard input or any other stream, and what, if anything, the function writes to standard output, standard   
+  >>>   error, or any other stream.   
+  >>> * State which global variables the function uses or affects.
    
 ### References
 * <a href=https://ee209.kaist.ac.kr/assignments/assignment5/resource/dynarray.c>dynarray.c</a>
