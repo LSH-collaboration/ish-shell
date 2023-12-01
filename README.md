@@ -36,8 +36,8 @@
   * **IMPORTANT**:
     > Print an error meesage if file redirection(e.g > ) is used with the above commands
   * Other cmd
-    > If command contains code to be executed, execute command with **execvp** system call with all args.
-    > If there is eerro trying to execute command, print error message with reason for the failure
+    > If command contains code to be executed, execute command with **execvp** system call with all args.   
+    > If there is eerro trying to execute command, print error message with reason for the failure   
        
 
 ### To get perfect grade
