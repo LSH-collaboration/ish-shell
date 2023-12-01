@@ -43,11 +43,11 @@
 ### To get perfect grade
 * Do not generate any warning message while compiling code with **gcc209**
 * Follow <a href=https://ee209.kaist.ac.kr/style.pdf>coding style</a>
-  > Names: You should use a clear and consistent style for variable and function names.
-  > One example of such a style is to prefix each variable name with characters
-  > that indicate its type. For example, the prefix c might indicate that the variable is of type char,
-  > i might indicate int, pc might mean char*, ui might mean unsigned int, etc.
-  > But it is fine to use another style -- a style which does not include the type of a variable in its name -- as long as the result is a readableprogram.
+  > Names: You should use a clear and consistent style for variable and function names.   
+  > One example of such a style is to prefix each variable name with characters   
+  > that indicate its type. For example, the prefix c might indicate that the variable is of type char,   
+  > i might indicate int, pc might mean char*, ui might mean unsigned int, etc.   
+  > But it is fine to use another style -- a style which does not include the type of a variable in its name -- as long as the result is a readableprogram.   
    
 ### References
 * <a href=https://ee209.kaist.ac.kr/assignments/assignment5/resource/dynarray.c>dynarray.c</a>
