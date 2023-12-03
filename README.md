@@ -1,71 +1,39 @@
-# ish-shell
-### Overview
-* program name : ish
+# Assignment 5: A Unix Shell
 
-### Building a Program
-* use compiler options in the below
-```bash
--D_BSD_SOURCE or -D_DEFAULT_SOURCE
--D_GNU_SOURCE
+## Build
+```sh
+$ make
 ```
 
-### Initialization and Termination
-* Init
-  * Read .ishrc file at $HOME dir
-  * Print each line in .ishrc when reading  and executing .ishrc in format in the below
-  > % LINE1
-  > % LINE2
-* Terminate program if user types Ctrl + d or when executing "exit" command
-* **IMPORTANT**:
-  > Program should handle exception when .ishrc file does not exist
-     
-### Functionalities to implement
-1. print a prompt
-   ```bash
-   % PROMPT
-   ```
-2. Read a line from STDIN
-3. Tokenize array of tokens
-4. Check syntax of command
-5. Execute command
-  * Command list
-    * setenv [var] [value] : if value is omitted, set empty string to [var]
-    * unsetenv [var] : if var is not yet set, just ignore
-    * cd [dir] : if dir is ommited, go to $HOME dir
-    * exit : exit with status 0
-  * **IMPORTANT**:
-    > Print an error meesage if file redirection(e.g > ) is used with the above commands
-  * Other cmd
-    > If command contains code to be executed, execute command with **execvp** system call with all args.   
-    > If there is eerro trying to execute command, print error message with reason for the failure   
-       
+NOTE: You should modify Makefile for your shell.
 
-### To get perfect grade
-* Do not generate any warning message while compiling code with **gcc209**
-* Follow <a href=https://ee209.kaist.ac.kr/style.pdf>coding style</a>
-  > **Names**:   
-  > * You should use a clear and consistent style for variable and function names.   
-  > * One example of such a style is to prefix each variable name with characters   
-  > * that indicate its type. For example, the prefix c might indicate that the variable is of type char,   
-  > * i might indicate int, pc might mean char*, ui might mean unsigned int, etc.   
-  > * But it is fine to use another style -- a style which does not include the type of a variable in its name -- as long as the result is a readableprogram.   
-  ---
-  > **Line lengths**:   
-  > * Limit line lengths in your source code to 72 characters.   
-  > * Doing so allows us to print your work in two columns, thus saving paper.   
-  ---
-  > **Comments**:   
-  > * Each source code file should begin with a comment that includes your name, student ID, and the description of the file.   
-  ---
-  > **Comments**:   
-  > * Each function should begin with a comment that describes what the function does from the caller's point of view.   
-  > * **The function comment should**:   
-  >> * Explicitly refer to the function's parameters (by name) and the function's return value.   
-  >> * State what, if anything, the function reads from standard input or any other stream, and what, if anything, the function writes to standard output, standard   
-  >>   error, or any other stream.   
-  >> * State which global variables the function uses or affects.
-   
-### References
-* <a href=https://ee209.kaist.ac.kr/assignments/assignment5/resource/dynarray.c>dynarray.c</a>
-* <a href=https://ee209.kaist.ac.kr/assignments/assignment5/resource/dynarray.h>dynarray.h</a>
-* <a href=https://ee209.kaist.ac.kr/assignments/assignment5/shellsupplementary.html>supplementary information</a>
+## Testing (Example)
+1. Build `ish` by running `make`.
+2. Run `./tools/test.py`.
+3. If you want to run specific test, use `-f` option.
+For example,
+
+```sh
+$ ./tools/test.py -f simple_test01
+```
+
+To validate whether your testing works, use `sampleish`.
+```sh
+$ cp sampleish ish
+$ ./tools/test.py
+```
+
+This should pass all provided test cases.
+
+## Submission
+1. Make `readme` and put `EthicsOath.pdf` to the current directory.
+2. Change your `STUDENT_ID` with yours.
+3. Run 
+```sh
+$ make submit
+```
+
+WARNING: Currently, we only include `*.c` and `*.h`.
+If you have subdirectories, please modify `Makefile` properly.
+
+4. Submit your `$(STUDENT_ID)_assign5.tar.gz`.
